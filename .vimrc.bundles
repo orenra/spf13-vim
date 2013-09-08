@@ -229,10 +229,16 @@
             Bundle 'tpope/vim-markdown'
             Bundle 'spf13/vim-preview'
             Bundle 'tpope/vim-cucumber'
-            Bundle 'quentindecock/vim-cucumber-align-pipes'
+            "Bundle 'quentindecock/vim-cucumber-align-pipes'
             Bundle 'Puppet-Syntax-Highlighting'
         endif
-
+ 
+" Clojure
+Bundle "tpope/vim-fireplace"
+Bundle "guns/vim-clojure-static"
+Bundle "kien/rainbow_parentheses.vim"
+Bundle "tpope/vim-classpath"
+ 
     " Twig
         if count(g:spf13_bundle_groups, 'twig')
             Bundle 'beyondwords/vim-twig'
