@@ -87,7 +87,7 @@
     " In your .vimrc.bundles.local file"
     " list only the plugin groups you will use
     if !exists('g:spf13_bundle_groups')
-        let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'go', 'twig', 'javascript', 'haskell', 'html', 'misc', 'scala']
+        let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'go', 'twig', 'javascript', 'haskell', 'html', 'misc', 'scala', 'clojure']
     endif
 
     " To override all the included bundles, put
@@ -233,12 +233,14 @@
             Bundle 'Puppet-Syntax-Highlighting'
         endif
  
-" Clojure
-Bundle "tpope/vim-fireplace"
-Bundle "guns/vim-clojure-static"
-Bundle "kien/rainbow_parentheses.vim"
-Bundle "tpope/vim-classpath"
- 
+     " Clojure
+        if count(g:spf13_bundle_groups, 'clojure')
+            Bundle 'tpope/vim-fireplace'
+            Bundle 'guns/vim-clojure-static'
+            Bundle 'kien/rainbow_parentheses.vim'
+            Bundle 'tpope/vim-classpath'
+        endif
+        
     " Twig
         if count(g:spf13_bundle_groups, 'twig')
             Bundle 'beyondwords/vim-twig'
